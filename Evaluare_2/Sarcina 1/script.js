@@ -1,4 +1,4 @@
-class Workers {
+class Worker {
     constructor(name, surname, hourRate, hours) {
     this.name = name;
     this.surname = surname;
@@ -84,8 +84,6 @@ if (worker1.getSalary() > worker2.getSalary()) {
         new Worker("George", "Enescu", 20, 160),
       ];
       
-      for (let i = 0; i < workers.length; i++) {
-        console.log(
-          `${workers[i].getName()} ${workers[i].getSurname()}: Hour rate = ${workers[i].getHourRate()}, Hours = ${workers[i].getHours()}, Gross salary = ${workers[i].getSalary()}, Net salary = ${workers[i].getSalaryNetto()}`
-        );
-      }
+      workers.forEach(worker => {
+        console.log(worker.name,worker.surname,worker.hourRate,worker.hours)
+        });
